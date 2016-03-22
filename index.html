@@ -1,0 +1,62 @@
+<style>
+  body {
+    background-color: black;
+  }
+	body>div {
+    display:inline-block;
+  }  
+</style>
+<!-- TradingView Widget BEGIN -->
+<div id="tv-miniwidget-cfc5f"></div>
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+
+<!-- TradingView Widget BEGIN -->
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+  var symbols = ["NASDAQ:AMZN", "NASDAQ:TSLA", "NASDAQ:FLXN", "NASDAQ:INFN", "NASDAQ:CRDS"];
+  
+  var derivedSymbols = [];
+  symbols.forEach(function(symbol) {
+    derivedSymbols.push([symbol, symbol]);
+  });
+  
+  new TradingView.MiniWidget({
+  "container_id": "tv-miniwidget-cfc5f",
+  "tabs": [
+    "Stocks"
+  ],
+  "symbols": {
+    "Stocks": symbols
+  },
+  "gridLineColor": "#E9E9EA",
+  "fontColor": "#83888D",
+  "underLineColor": "#dbeffb",
+  "trendLineColor": "#4bafe9",
+  "activeTickerBackgroundColor": "#EDF0F3",
+  "large_chart_url": "https://www.tradingview.com/chart/",
+  "noGraph": true,
+  "width": "300px",
+  "height": "300px",
+  "locale": "en"
+});
+  
+  
+  symbols.forEach(function(symbol) {
+    new TradingView.widget({
+      "width": 300,
+      "height": 300,
+      "symbol": symbol,
+      "interval": "5",
+      "timezone": "Etc/UTC",
+      "theme": "Black",
+      "style": "8",
+      "locale": "en",
+      "toolbar_bg": "#f1f3f6",
+      "hide_top_toolbar": true,
+      "save_image": false,
+      "hideideas": true
+    });
+  });
+
+</script>
+<!-- TradingView Widget END -->
