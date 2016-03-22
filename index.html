@@ -2,16 +2,29 @@
   body {
     background-color: black;
   }
-	body>div {
+  body>div {
+    height:100%;
+    width: 350px;
+    
+    display:inline-block;
+  }
+  #charts {
+    width:calc(100% - 350px);
+    position:absolute;
+    left:350px;
+  }
+	#charts>div {
     display:inline-block;
   }  
 </style>
 <!-- TradingView Widget BEGIN -->
 <div id="tv-miniwidget-cfc5f"></div>
+
 <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
 
 <!-- TradingView Widget BEGIN -->
 <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<div id="charts">
 <script type="text/javascript">
   var symbols = [
   	"NASDAQ:AMZN", 
@@ -50,7 +63,7 @@
   "large_chart_url": "https://www.tradingview.com/chart/",
   "noGraph": true,
   "width": "300px",
-  "height": "300px",
+  "height": "100%",
   "locale": "en"
 });
   
@@ -71,6 +84,6 @@
       "hideideas": true
     });
   });
-
 </script>
+</div>
 <!-- TradingView Widget END -->
