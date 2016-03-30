@@ -26,21 +26,26 @@
 <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
 <div id="charts">
 <script type="text/javascript">
-  var symbols = [
-  	"NASDAQ:AMZN", 
-  	"NASDAQ:TSLA", 
-  	"NASDAQ:FLXN", 
-  	"NASDAQ:INFN", 
-  	"NASDAQ:CRDS", 
-  	"NYSE:CIEN", 
-  	"NASDAQ:PPHM", 
-  	"NASDAQ:CTIC", 
-  	"NASDAQ:AAPL",
-  	"NASDAQ:RYAAY",
-  	"NYSE:KO",
-  	"NYSE:SNE",
-  	"NASDAQ:GOOG",
-  	"FX_IDC:USDEUR"];
+  if (location.search) {
+  	var symbols = location.search.replace("?", "").split(",");
+  } else {
+  	var symbols = [
+  		"NASDAQ:AMZN", 
+  		"NASDAQ:TSLA", 
+  		"NASDAQ:FLXN", 
+  		"NASDAQ:INFN", 
+  		"NASDAQ:CRDS", 
+  		"NYSE:CIEN", 
+  		"NASDAQ:PPHM", 
+  		"NASDAQ:CTIC", 
+  		"NASDAQ:AAPL",
+  		"NASDAQ:RYAAY",
+  		"NYSE:KO",
+  		"NYSE:SNE",
+  		"NASDAQ:GOOG",
+  		"FX_IDC:USDEUR"
+  		];
+  }
   
   var derivedSymbols = [];
   symbols.forEach(function(symbol) {
