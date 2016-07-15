@@ -103,7 +103,14 @@
     });
   });
   
-  setTimeout("location.reload(true);", 180000);
+  setTimeout("location.reload(true);", 1800000);
+  
+  setInterval(function() {
+    var charts = document.querySelectorAll("#charts>div")
+    for (var i = 0, chart; chart = charts[i]; i++ ) {
+      chart.style.margin = "-5px";
+    }
+  }, 500);
 </script>
 </div>
 <!-- TradingView Widget END -->
