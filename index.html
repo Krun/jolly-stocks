@@ -1,6 +1,8 @@
 <style>
   body {
     background-color: black;
+    margin: 0;
+    padding: 0;
   }
   body>div {
     height:100%;
@@ -8,14 +10,17 @@
     
     display:inline-block;
   }
-  .onchart-tv-logo {
-  	display:none;
-  }
   #charts {
-    width:calc(100% - 350px);
+    width:calc(100% - 325px);
     position:absolute;
     left:350px;
-  }
+  }  
+  div#tv-miniwidget-cfc5f {
+    margin: 0;
+    position: fixed;
+    left: -25px;
+    top: 0;
+
 	#charts>div {
     display:inline-block;
   }  
@@ -83,7 +88,6 @@
   "locale": "en"
 });
   
-  
   symbols.forEach(function(symbol) {
     new TradingView.widget({
       "width": 300,
@@ -94,7 +98,7 @@
       "theme": "Black",
       "style": "8",
       "locale": "en",
-      "toolbar_bg": "#f1f3f6",
+      "toolbar_bg": "rgba(0, 0, 0, 1)",
       "hide_top_toolbar": true,
       "save_image": false,
       "hideideas": true
